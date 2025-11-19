@@ -1,0 +1,56 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# basicNGS
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+basicNGS é um pacote em R desenvolvido para facilitar análises básicas e
+rápidas em biologia molecular, bioinformática e genômica funcional.  
+Ele reúne funções simples, reprodutíveis e padronizadas para tarefas
+comuns como:
+
+- PCA (Análise de Componentes Principais)
+- Construção de heatmaps (ComplexHeatmap)
+- Enriquecimento funcional (KEGG via gprofiler2)
+- Manipulação e preparação de dados omicos
+
+O objetivo é oferecer **funções intuitivas**, com **boas práticas**, e
+capazes de gerar **resultados e gráficos prontos para publicação** com
+comandos mínimos.
+
+## Instalação
+
+Você pode instalar a versão do desenvolver a partir do
+[GitHub](https://github.com/):
+
+``` r
+# install.packages("pak")
+pak::pak("deborakm/basicNGS")
+```
+
+## ✨ **Principais Recursos**
+
+### 🔹 `basicPCA()`
+
+Executa uma PCA simples e robusta, com opções de: - remoção de NA -
+escala e centramento automáticos - retorno direto do objeto `prcomp`
+
+### 🔹 `plotPCA()`
+
+Gera um gráfico PCA formatado, incluindo: - percentagem de variância nos
+eixos - cores personalizáveis por grupo - labels opcionais
+
+### 🔹 `basicHeatmap()`
+
+Cria heatmaps prontos para publicação usando **ComplexHeatmap**, com: -
+cores via viridis - hierarquização configurável - suporte a anotações
+superiores e inferiores
+
+### 🔹 `basicKEGG()` ou `basicGO()`
+
+Realiza enriquecimento KEGG usando **gprofiler2**, com: - cálculo
+automático de gene ratio - filtragem por p-valor - dotplot altamente
+customizável (ggplot2 + viridis) - opção de salvar tabela (xlsx) e
+gráfico (png) - retorno final como objeto ggplot
