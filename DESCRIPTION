@@ -1,0 +1,11 @@
+Package: basicNGS
+Type: Package
+Title: Análises básicas com dados de NGS
+Version: 0.1.0
+Author@R: c(person(Debora, Maeda, Kazumi, debora.maeda@unesp.br, role = c('aut', 'cre')))
+Maintainer: Debora Kazumi Maeda <debora.maeda@unesp.br>
+Description: Este pacote permite que o usuário realize análises básicas com dados de sequenciamento de nova geração de forma simplificada.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: R(>= 4.4.1)
