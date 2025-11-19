@@ -20,7 +20,7 @@
 basicKEGG <- function(
     genes,
     organism = "hsapiens",
-    sources = "GO"
+    sources = "GO",
     pval_cutoff = 0.05,
     top = 50,
     save_plot = FALSE,
