@@ -7,6 +7,7 @@
 #'
 #' @param genes Character vector of gene symbols.
 #' @param organism Organism code (default = "hsapiens").
+#' @param sources pathways source to query. Default is "KEGG".
 #' @param pval_cutoff P-value cutoff (default = 0.05).
 #' @param top Number of KEGG terms to keep (default = 50).
 #' @param save_plot Logical; save PNG plot? (default = FALSE).
@@ -30,7 +31,7 @@ basicKEGG <- function(
 ) {
 
   # --- Checks ------------------------------------------------------------------
-  if (missing(genes)) stop("Você deve fornecer um vetor de genes.")
+  if (missing(genes)) stop("Voce deve fornecer um vetor de genes.")
 
   if (!is.vector(genes) || !is.character(genes)) {
     stop("'genes' deve ser um vetor de caracteres.")
@@ -39,7 +40,7 @@ basicKEGG <- function(
   genes <- unique(na.omit(genes))
 
   if (length(genes) < 5) {
-    stop("Forneça pelo menos 5 genes para uma análise robusta.")
+    stop("Forneca pelo menos 5 genes para uma análise robusta.")
   }
 
   # --- Enrichment ---------------------------------------------------------------

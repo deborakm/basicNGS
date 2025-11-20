@@ -22,6 +22,3 @@ Um objeto da classe `prcomp` contendo os resultados da PCA.
 Esta função realiza uma PCA utilizando `prcomp`, com opções para
 centralização e escalonamento das variáveis.
 }
-\examples{
-pca <- minha_pca(iris[, 1:4])
-}

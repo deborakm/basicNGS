@@ -1,11 +1,11 @@
-#' Plota o gráfico de PCA (PC1 x PC2)
+#' Plota o grafico de PCA (PC1 x PC2)
 #'
 #' @param pca_result Objeto resultante de prcomp().
-#' @param grupos Um vetor com fatores de agrupamento (ex.: condições).
-#'               Deve ter o mesmo número de linhas que pca_result$x.
-#' @param rotulos Vetor com nomes/samples para mostrar no gráfico.
+#' @param grupos Um vetor com fatores de agrupamento (ex.: condicoes).
+#'               Deve ter o mesmo numero de linhas que pca_result$x.
+#' @param rotulos Vetor com nomes/samples para mostrar no grafico.
 #'
-#' @return Um gráfico ggplot2.
+#' @return Um grafico ggplot2.
 #' @export
 
 
@@ -25,7 +25,7 @@ plotPCA <- function(pca_result, grupos = NULL, rotulos = NULL) {
     pca_df$Grupo <- as.factor(grupos)
   }
 
-  # Se foram passados rótulos, acrescentar
+  # Se foram passados rotulos, acrescentar
   if (!is.null(rotulos)) {
     if (length(rotulos) != nrow(pca_df)) {
       stop("O vetor 'rotulos' deve ter o mesmo número de elementos que as amostras.")
@@ -36,7 +36,7 @@ plotPCA <- function(pca_result, grupos = NULL, rotulos = NULL) {
   }
 
   # ------------------------------------------
-  # 2. Variância explicada
+  # 2. Variancia explicada
   # ------------------------------------------
   autovalores <- pca_result$sdev^2
   porcentagem <- autovalores / sum(autovalores) * 100

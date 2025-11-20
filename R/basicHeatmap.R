@@ -1,20 +1,20 @@
 #' Heatmap genérico com ComplexHeatmap
 #'
-#' @param data Data frame ou tibble contendo apenas valores numéricos.
-#' @param groups Vetor opcional com grupo de cada coluna (ex.: condição, tratamento).
-#' @param annotations Lista opcional de vetores para anotações adicionais (ex.: Age, Sex).
-#' @param annotation_colors Lista de listas com cores para cada anotação.
+#' @param data Data frame ou tibble contendo apenas valores numericos.
+#' @param groups Vetor opcional com grupo de cada coluna (ex.: condicao, tratamento).
+#' @param annotations Lista opcional de vetores para anotacoes adicionais (ex.: Age, Sex).
+#' @param annotation_colors Lista de listas com cores para cada anotacao.
 #' @param palette Paleta viridis usada para o heatmap (ex.: "magma", "viridis").
 #' @param scale_data Se TRUE, escala cada linha (z-score).
 #' @param cluster_rows Se TRUE, clusteriza linhas.
 #' @param cluster_columns Se TRUE, clusteriza colunas.
-#' @param title Título do heatmap.
-#' @param output Arquivo PNG opcional para salvar o gráfico.
+#' @param title Titulo do heatmap.
+#' @param output Arquivo PNG opcional para salvar o grafico.
 #'
 #' @return Um objeto Heatmap.
 #' @export
 basicHeatmap <- function(
-    dados,
+    data,
     groups = NULL,
     annotations = NULL,
     annotation_colors = NULL,
@@ -27,16 +27,16 @@ basicHeatmap <- function(
 ){
 
   # ----------------------------
-  # 1. Verificações
+  # 1. Verificacoes
   # ----------------------------
-  if (!is.data.frame(dados)) {
-    stop("'dados' deve ser um data frame ou tibble.")
+  if (!is.data.frame(data)) {
+    stop("'data' deve ser um data frame ou tibble.")
   }
-  if (!all(sapply(dados, is.numeric))) {
-    stop("Todas as colunas de 'dados' devem ser numéricas.")
+  if (!all(sapply(data, is.numeric))) {
+    stop("Todas as colunas de 'data' devem ser numericas.")
   }
 
-  mat <- as.matrix(dados)
+  mat <- as.matrix(data)
 
   # Escalar linhas (opcional)
   if (scale_data) {
@@ -44,13 +44,13 @@ basicHeatmap <- function(
   }
 
   # ----------------------------
-  # 2. Anotação superior (groups)
+  # 2. Anotacao superior (groups)
   # ----------------------------
   top_ann <- NULL
 
   if (!is.null(groups)) {
     if (length(groups) != ncol(mat)) {
-      stop("O vetor 'groups' deve ter o mesmo número de elementos que as colunas.")
+      stop("O vetor 'groups' deve ter o mesmo numero de elementos que as colunas.")
     }
 
     top_ann <- HeatmapAnnotation(
@@ -66,7 +66,7 @@ basicHeatmap <- function(
   }
 
   # ----------------------------
-  # 3. Outras anotações (Age, Sex…)
+  # 3. Outras anotacoes (Age, Sex…)
   # ----------------------------
   bottom_ann <- NULL
 
