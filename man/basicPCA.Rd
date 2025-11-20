@@ -4,7 +4,7 @@
 \alias{basicPCA}
 \title{Executa Analise de Componentes Principais (PCA)}
 \usage{
-basicPCA(data, scale = TRUE, center = TRUE)
+basicPCA(data, scale = TRUE, center = TRUE, remove_na = TRUE)
 }
 \arguments{
 \item{data}{Um data.frame ou tibble contendo apenas colunas numericas.}

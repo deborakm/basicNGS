@@ -9,7 +9,7 @@ Description: Este pacote permite que o usuário realize análises básicas com d
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Depends: R(>= 4.4.1)
+Depends: R(>= 4.4.0)
 URL: https://github.com/deborakm/basicNGS
 BugReports: https://github.com/deborakm/basicNGS/issues
 RoxygenNote: 7.3.3
