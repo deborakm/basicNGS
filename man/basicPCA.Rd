@@ -2,16 +2,16 @@
 % Please edit documentation in R/basicPCA.R
 \name{basicPCA}
 \alias{basicPCA}
-\title{Executa Análise de Componentes Principais (PCA)}
+\title{Executa Analise de Componentes Principais (PCA)}
 \usage{
-basicPCA(dados, scale = TRUE, center = TRUE)
+basicPCA(data, scale = TRUE, center = TRUE)
 }
 \arguments{
-\item{dados}{Um data.frame ou tibble contendo apenas colunas numéricas.}
+\item{data}{Um data.frame ou tibble contendo apenas colunas numericas.}
 
-\item{scale}{Logical. Se TRUE, padroniza as variáveis (desvio padrão = 1).}
+\item{scale}{Logical. Se TRUE, padroniza as variaveis (desvio padrao = 1).}
 
-\item{center}{Logical. Se TRUE, centraliza as variáveis na média.}
+\item{center}{Logical. Se TRUE, centraliza as variaveis na media.}
 
 \item{remove_na}{Logical. Se TRUE, remove linhas contendo NA antes da PCA.}
 }
@@ -19,6 +19,6 @@ basicPCA(dados, scale = TRUE, center = TRUE)
 Um objeto da classe `prcomp` contendo os resultados da PCA.
 }
 \description{
-Esta função realiza uma PCA utilizando `prcomp`, com opções para
-centralização e escalonamento das variáveis.
+Esta funcao realiza uma PCA utilizando `prcomp`, com opcoes para
+centralizacao e escalonamento das variaveis.
 }

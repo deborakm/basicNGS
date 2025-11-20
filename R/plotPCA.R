@@ -20,7 +20,7 @@ plotPCA <- function(pca_result, grupos = NULL, rotulos = NULL) {
   # Se foram passados grupos, acrescentar
   if (!is.null(grupos)) {
     if (length(grupos) != nrow(pca_df)) {
-      stop("O vetor 'grupos' deve ter o mesmo número de elementos que as amostras.")
+      stop("O vetor 'grupos' deve ter o mesmo numero de elementos que as amostras.")
     }
     pca_df$Grupo <- as.factor(grupos)
   }
@@ -28,7 +28,7 @@ plotPCA <- function(pca_result, grupos = NULL, rotulos = NULL) {
   # Se foram passados rotulos, acrescentar
   if (!is.null(rotulos)) {
     if (length(rotulos) != nrow(pca_df)) {
-      stop("O vetor 'rotulos' deve ter o mesmo número de elementos que as amostras.")
+      stop("O vetor 'rotulos' deve ter o mesmo numero de elementos que as amostras.")
     }
     pca_df$Sample <- rotulos
   } else {

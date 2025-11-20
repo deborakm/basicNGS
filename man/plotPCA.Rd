@@ -2,21 +2,21 @@
 % Please edit documentation in R/plotPCA.R
 \name{plotPCA}
 \alias{plotPCA}
-\title{Plota o gráfico de PCA (PC1 x PC2)}
+\title{Plota o grafico de PCA (PC1 x PC2)}
 \usage{
 plotPCA(pca_result, grupos = NULL, rotulos = NULL)
 }
 \arguments{
 \item{pca_result}{Objeto resultante de prcomp().}
 
-\item{grupos}{Um vetor com fatores de agrupamento (ex.: condições).
-Deve ter o mesmo número de linhas que pca_result$x.}
+\item{grupos}{Um vetor com fatores de agrupamento (ex.: condicoes).
+Deve ter o mesmo numero de linhas que pca_result$x.}
 
-\item{rotulos}{Vetor com nomes/samples para mostrar no gráfico.}
+\item{rotulos}{Vetor com nomes/samples para mostrar no grafico.}
 }
 \value{
-Um gráfico ggplot2.
+Um grafico ggplot2.
 }
 \description{
-Plota o gráfico de PCA (PC1 x PC2)
+Plota o grafico de PCA (PC1 x PC2)
 }

@@ -11,7 +11,7 @@
 #' @return Um objeto da classe `prcomp` contendo os resultados da PCA.
 #' @export
 
-basicPCA <- function(data, scale = TRUE, center = TRUE) {
+basicPCA <- function(data, scale = TRUE, center = TRUE, remove_na = TRUE) {
 
   # Verifica a classe do objeto data
   if (!is.data.frame(data)) {
@@ -34,7 +34,7 @@ basicPCA <- function(data, scale = TRUE, center = TRUE) {
     }
 
     if (n_after == 0) {
-      stop("Apos remover NAs, não sobrou nenhuma linha para analise.")
+      stop("Apos remover NAs, nao sobrou nenhuma linha para analise.")
     }
   }
 

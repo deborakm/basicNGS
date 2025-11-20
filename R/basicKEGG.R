@@ -40,7 +40,7 @@ basicKEGG <- function(
   genes <- unique(na.omit(genes))
 
   if (length(genes) < 5) {
-    stop("Forneca pelo menos 5 genes para uma análise robusta.")
+    stop("Forneca pelo menos 5 genes para uma analise robusta.")
   }
 
   # --- Enrichment ---------------------------------------------------------------

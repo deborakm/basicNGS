@@ -5,7 +5,7 @@
 \title{Heatmap genérico com ComplexHeatmap}
 \usage{
 basicHeatmap(
-  dados,
+  data,
   groups = NULL,
   annotations = NULL,
   annotation_colors = NULL,
@@ -18,11 +18,13 @@ basicHeatmap(
 )
 }
 \arguments{
-\item{groups}{Vetor opcional com grupo de cada coluna (ex.: condição, tratamento).}
+\item{data}{Data frame ou tibble contendo apenas valores numericos.}
 
-\item{annotations}{Lista opcional de vetores para anotações adicionais (ex.: Age, Sex).}
+\item{groups}{Vetor opcional com grupo de cada coluna (ex.: condicao, tratamento).}
 
-\item{annotation_colors}{Lista de listas com cores para cada anotação.}
+\item{annotations}{Lista opcional de vetores para anotacoes adicionais (ex.: Age, Sex).}
+
+\item{annotation_colors}{Lista de listas com cores para cada anotacao.}
 
 \item{palette}{Paleta viridis usada para o heatmap (ex.: "magma", "viridis").}
 
@@ -32,11 +34,9 @@ basicHeatmap(
 
 \item{cluster_columns}{Se TRUE, clusteriza colunas.}
 
-\item{title}{Título do heatmap.}
+\item{title}{Titulo do heatmap.}
 
-\item{output}{Arquivo PNG opcional para salvar o gráfico.}
-
-\item{data}{Data frame ou tibble contendo apenas valores numéricos.}
+\item{output}{Arquivo PNG opcional para salvar o grafico.}
 }
 \value{
 Um objeto Heatmap.

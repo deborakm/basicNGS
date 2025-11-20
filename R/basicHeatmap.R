@@ -66,7 +66,7 @@ basicHeatmap <- function(
   }
 
   # ----------------------------
-  # 3. Outras anotacoes (Age, Sex…)
+  # 3. Outras anotacoes
   # ----------------------------
   bottom_ann <- NULL
 
