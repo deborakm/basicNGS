@@ -10,9 +10,6 @@
 #'
 #' @return Um objeto da classe `prcomp` contendo os resultados da PCA.
 #' @export
-#'
-#' @examples
-#' pca <- minha_pca(iris[, 1:4])
 
 basicPCA <- function(dados, scale = TRUE, center = TRUE) {
 
